@@ -1,208 +1,127 @@
 /*
-Copyright (c) 2003-2017, CKSource - Frederico Knabben. All rights reserved.
-For licensing, see LICENSE.md or http://ckeditor.com/license
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
 */
 
-body
-{
-	/* Font */
-	font-family: sans-serif, Arial, Verdana, "Trebuchet MS";
-	font-size: 12px;
-
-	/* Text color */
-	color: #333;
-
-	/* Remove the background color to make it transparent */
-	background-color: #fff;
-
-	margin: 20px;
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+ margin:0;
+ padding:0;
+ border:0;
+ outline:0;
+ vertical-align:baseline;
+ background:transparent;
 }
 
-.cke_editable
-{
-	font-size: 13px;
-	line-height: 1.6;
+body {
+ /* プロジェクトによって変動 */
+ min-width: 1000px;
+ color: #000;
+ line-height: 1.6;
+ font-weight: 400;
+ font-family: 'ヒラギノ角ゴ ProN W3', 'Hiragino Kaku Gothic ProN', 'YuGothic', '游ゴシック', 'メイリオ', Meiryo, -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
 
-	/* Fix for missing scrollbars with RTL texts. (#10488) */
-	word-wrap: break-word;
+ width: 100%;
+ font-smoothing: antialiased;
+ font-variant-numeric: tabular-nums;
+ /* safari hover対策 */
+ -webkit-font-smoothing: antialiased;
 }
 
-blockquote
-{
-	font-style: italic;
-	font-family: Georgia, Times, "Times New Roman", serif;
-	padding: 2px 0;
-	border-style: solid;
-	border-color: #ccc;
-	border-width: 0;
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+ display:block;
 }
 
-.cke_contents_ltr blockquote
-{
-	padding-left: 20px;
-	padding-right: 8px;
-	border-left-width: 5px;
+ul, ol {
+ list-style:none;
 }
 
-.cke_contents_rtl blockquote
-{
-	padding-left: 8px;
-	padding-right: 20px;
-	border-right-width: 5px;
+blockquote, q {
+ quotes:none;
 }
 
-a
-{
-	color: #0782C1;
+blockquote:before, blockquote:after,
+q:before, q:after {
+ content:'';
+ content:none;
 }
 
-ol,ul,dl
-{
-	/* IE7: reset rtl list margin. (#7334) */
-	*margin-right: 0px;
-	/* preserved spaces for list items with text direction other than the list. (#6249,#8049)*/
-	padding: 0 40px;
+a {
+ margin:0;
+ padding:0;
+ vertical-align:baseline;
+ text-decoration: none;
+ color: inherit;
 }
 
-h1,h2,h3,h4,h5,h6
-{
-	font-weight: normal;
-	line-height: 1.2;
+/* change colours to suit your needs */
+ins {
+ background-color:#ff9;
+ color:#000;
+ text-decoration:none;
 }
 
-hr
-{
-	border: 0px;
-	border-top: 1px solid #ccc;
+/* change colours to suit your needs */
+mark {
+ background-color:#ff9;
+ color:#000;
+ font-style:italic;
+ font-weight:bold;
 }
 
-img.right
-{
-	border: 1px solid #ccc;
-	float: right;
-	margin-left: 15px;
-	padding: 5px;
+del {
+ text-decoration: line-through;
 }
 
-img.left
-{
-	border: 1px solid #ccc;
-	float: left;
-	margin-right: 15px;
-	padding: 5px;
+abbr[title], dfn[title] {
+ border-bottom:1px dotted;
+ cursor:help;
 }
 
-pre
-{
-	white-space: pre-wrap; /* CSS 2.1 */
-	word-wrap: break-word; /* IE7 */
-	-moz-tab-size: 4;
-	tab-size: 4;
+table {
+ border-collapse:collapse;
+ border-spacing:0;
 }
 
-.marker
-{
-	background-color: Yellow;
+/* change border colour to suit your needs */
+hr {
+ display:block;
+ height:1px;
+ border:0;
+ border-top:1px solid #cccccc;
+ margin:1em 0;
+ padding:0;
 }
 
-span[lang]
-{
-	font-style: italic;
+input, select {
+ vertical-align:middle;
 }
 
-figure
-{
-	text-align: center;
-	border: solid 1px #ccc;
-	border-radius: 2px;
-	background: rgba(0,0,0,0.05);
-	padding: 10px;
-	margin: 10px 20px;
-	display: inline-block;
+img {
+ vertical-align: bottom;
+ line-height: 1.0;
 }
 
-figure > figcaption
-{
-	text-align: center;
-	display: block; /* For IE8 */
-}
-
-a > img {
-	padding: 1px;
-	margin: 1px;
-	border: none;
-	outline: 1px solid #0782C1;
-}
-
-/* Widget Styles */
-.code-featured
-{
-	border: 5px solid red;
-}
-
-.math-featured
-{
-	padding: 20px;
-	box-shadow: 0 0 2px rgba(200, 0, 0, 1);
-	background-color: rgba(255, 0, 0, 0.05);
-	margin: 10px;
-}
-
-.image-clean
-{
-	border: 0;
-	background: none;
-	padding: 0;
-}
-
-.image-clean > figcaption
-{
-	font-size: .9em;
-	text-align: right;
-}
-
-.image-grayscale
-{
-	background-color: white;
-	color: #666;
-}
-
-.image-grayscale img, img.image-grayscale
-{
-	filter: grayscale(100%);
-}
-
-.embed-240p
-{
-	max-width: 426px;
-	max-height: 240px;
-	margin:0 auto;
-}
-
-.embed-360p
-{
-	max-width: 640px;
-	max-height: 360px;
-	margin:0 auto;
-}
-
-.embed-480p
-{
-	max-width: 854px;
-	max-height: 480px;
-	margin:0 auto;
-}
-
-.embed-720p
-{
-	max-width: 1280px;
-	max-height: 720px;
-	margin:0 auto;
-}
-
-.embed-1080p
-{
-	max-width: 1920px;
-	max-height: 1080px;
-	margin:0 auto;
+button {
+ line-height: 1.0;
+ background-color: transparent;
+ border: none;
+ cursor: pointer;
+ outline: none;
+ padding: 0;
+ appearance: none;
 }
