@@ -8,7 +8,7 @@
   config.extraPlugins = 'sharedspace,mathjax';
   config.mathJaxLib = '//cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-MML-AM_CHTML'
   config.removePlugins = 'elementspath';
-  config.contentsCss = '/assets/ckeditor/contents.css'
+  config.contentsCss = '/public/ckeditor/contents.css'
 };
 
 // ckeditor内のHTMLコメントを禁止
